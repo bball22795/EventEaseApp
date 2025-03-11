@@ -1,0 +1,92 @@
+@page "/eventregistration/{eventId:int}"
+@using EventEaseApp.Models
+@inject EventEaseApp.Services.EventService EventService
+@inject EventEaseApp.Services.AttendanceService AttendanceService
+
+@code {
+    [Parameter]
+    public int EventId { get; set; }
+
+    private Event? eventDetails;
+    private List<RegistrationModel> participants = new List<RegistrationModel>();
+    private bool isLoading = true;
+    private string? errorMessage;
+    private RegistrationModel registration = new RegistrationModel();
+    private EditContext? editContext;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            eventDetails = await EventService.GetEventByIdAsync(EventId);
+            participants = AttendanceService.GetParticipants(EventId);
+            editContext = new EditContext(registration);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading event: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void HandleValidSubmit()
+    {
+        // Add participant to the attendance list
+        AttendanceService.AddParticipant(EventId, registration);
+        participants = AttendanceService.GetParticipants(EventId); // Refresh the participants list
+        Console.WriteLine("Form submitted successfully");
+    }
+
+    private void HandleInvalidSubmit()
+    {
+        // Handle invalid form submission
+        Console.WriteLine("Form submission failed");
+    }
+}
+
+@if (isLoading)
+{
+    <p>Loading event details...</p>
+}
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p>@errorMessage</p>
+}
+else if (eventDetails != null)
+{
+    <h1>Register for @eventDetails.Name</h1>
+    <p>Date: @eventDetails.Date.ToString("MMMM dd, yyyy")</p>
+    <p>Location: @eventDetails.Location</p>
+
+    <EditForm EditContext="editContext" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="HandleInvalidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div>
+            <label>Name</label>
+            <InputText @bind-Value="registration.Name" placeholder="Your Name" />
+            <ValidationMessage For="@(() => registration.Name)" />
+        </div>
+        <div>
+            <label>Email</label>
+            <InputText @bind-Value="registration.Email" placeholder="Your Email" />
+            <ValidationMessage For="@(() => registration.Email)" />
+        </div>
+        <button type="submit">Register</button>
+    </EditForm>
+
+    <h2>Participants</h2>
+    <ul>
+        @foreach (var participant in participants)
+        {
+            <li>@participant.Name (@participant.Email)</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Event not found.</p>
+}

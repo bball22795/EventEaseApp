@@ -1,0 +1,66 @@
+@using EventEaseApp.Models
+@using Microsoft.AspNetCore.Components.Forms
+@inject EventEaseApp.Services.EventService EventService
+
+@code {
+    [Parameter]
+    public Event Event { get; set; }
+
+    private EditContext editContext;
+
+    protected override void OnInitialized()
+    {
+        editContext = new EditContext(Event);
+    }
+
+    private void OnFieldChanged(object sender, FieldChangedEventArgs e)
+    {
+        EventService.UpdateEvent(Event);
+    }
+}
+
+<EditForm EditContext="editContext" OnFieldChanged="OnFieldChanged">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="event-card">
+        <div>
+            <label>Event Name</label>
+            <InputText @bind-Value="Event.Name" placeholder="Event Name" />
+            <ValidationMessage For="@(() => Event.Name)" />
+        </div>
+        <div>
+            <label>Event Date</label>
+            <InputDate @bind-Value="Event.Date" />
+            <ValidationMessage For="@(() => Event.Date)" />
+        </div>
+        <div>
+            <label>Event Location</label>
+            <InputText @bind-Value="Event.Location" placeholder="Location" />
+            <ValidationMessage For="@(() => Event.Location)" />
+        </div>
+    </div>
+</EditForm>
+
+<style>
+    .event-card {
+        border: 1px solid #ccc;
+        padding: 16px;
+        margin: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-card input {
+        display: block;
+        margin: 8px 0;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .event-card label {
+        display: block;
+        margin-bottom: 4px;
+    }
+</style>

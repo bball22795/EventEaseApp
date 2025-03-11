@@ -1,0 +1,29 @@
+﻿@inherits LayoutComponentBase
+@inject EventEaseApp.Services.UserSessionService UserSessionService
+
+<PageTitle>EventEaseApp</PageTitle>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @if (UserSessionService.IsSessionActive())
+            {
+                <p>Session started at: @UserSessionService.SessionStartTime</p>
+            }
+            else
+            {
+                <p>No active session</p>
+            }
+
+            @Body
+        </article>
+    </main>
+</div>

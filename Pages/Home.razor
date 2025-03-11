@@ -1,0 +1,10 @@
+﻿@page "/"
+@inject EventEaseApp.Services.UserSessionService UserSessionService
+
+<PageTitle>Home</PageTitle>
+
+<div class="content">
+    <h1>Hello, @UserSessionService.UserId!</h1>
+    <p>Welcome to the EventEase Application</p>
+    <p>You can view and register for upcoming events here.</p>
+</div>

@@ -1,0 +1,58 @@
+@page "/eventdetails/{eventId:int}"
+@using EventEaseApp.Models
+@inject EventEaseApp.Services.EventService EventService
+@inject EventEaseApp.Services.AttendanceService AttendanceService
+
+@code {
+    [Parameter]
+    public int EventId { get; set; }
+
+    private Event? eventDetails;
+    private List<RegistrationModel> participants = new List<RegistrationModel>();
+    private bool isLoading = true;
+    private string? errorMessage;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            eventDetails = await EventService.GetEventByIdAsync(EventId);
+            participants = AttendanceService.GetParticipants(EventId);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading event: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+@if (isLoading)
+{
+    <p>Loading event details...</p>
+}
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p>@errorMessage</p>
+}
+else if (eventDetails != null)
+{
+    <h1>@eventDetails.Name</h1>
+    <p>Date: @eventDetails.Date.ToString("MMMM dd, yyyy")</p>
+    <p>Location: @eventDetails.Location</p>
+
+    <h2>Participants</h2>
+    <ul>
+        @foreach (var participant in participants)
+        {
+            <li>@participant.Name (@participant.Email)</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Event not found.</p>
+}

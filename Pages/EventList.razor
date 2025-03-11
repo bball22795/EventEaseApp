@@ -1,0 +1,81 @@
+@page "/eventlist"
+@using EventEaseApp.Components
+@using EventEaseApp.Models
+@inject EventEaseApp.Services.EventService EventService
+@inject EventEaseApp.Services.AttendanceService AttendanceService
+
+<h1>Event List</h1>
+
+@code {
+    private List<Event> events = new List<Event>();
+    private bool isLoading = true;
+    private string errorMessage;
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private bool hasMoreEvents = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        EventService.OnChange += StateHasChanged;
+        await LoadEventsAsync();
+    }
+
+    private async Task LoadEventsAsync()
+    {
+        try
+        {
+            var newEvents = await EventService.GetEventsAsync();
+            var pagedEvents = newEvents.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+            events.AddRange(pagedEvents);
+
+            if (pagedEvents.Count < pageSize)
+            {
+                hasMoreEvents = false;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading events: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task LoadNextPageAsync()
+    {
+        currentPage++;
+        await LoadEventsAsync();
+    }
+}
+
+@if (isLoading)
+{
+    <p>Loading events...</p>
+}
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p>@errorMessage</p>
+}
+else
+{
+    @foreach (var eventItem in events)
+    {
+        <div class="event-card">
+            <EventCard Event="@eventItem" />
+            <p>Attendance: @AttendanceService.GetParticipants(eventItem.Id).Count</p>
+            <a class="btn btn-primary" href="@($"/eventdetails/{eventItem.Id}")">View Details</a>
+            <a class="btn btn-primary" href="@($"/eventregistration/{eventItem.Id}")">Register</a>
+        </div>
+    }
+
+    @if (hasMoreEvents)
+    {
+        <button class="btn btn-primary" @onclick="LoadNextPageAsync">Load More</button>
+    }
+    else
+    {
+        <p>No more events to load.</p>
+    }
+}
