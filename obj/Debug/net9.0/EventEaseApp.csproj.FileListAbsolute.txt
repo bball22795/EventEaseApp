@@ -1075,10 +1075,10 @@ C:\Users\waing\EventEaseApp\obj\Debug\net9.0\EventEaseApp.dll
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\refint\EventEaseApp.dll
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\EventEaseApp.pdb
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\ref\EventEaseApp.dll
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.ujf1c3fzjp.pdb
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.olmw30gdxv.wasm
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.ujf1c3fzjp.pdb.gz
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.olmw30gdxv.wasm.gz
-C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\skwk8s9ui1-olmw30gdxv.gz
-C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\c1jhhq4o6d-ujf1c3fzjp.gz
-C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\a1w0b3e4ey-35jvyid5br.gz
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.90s571e201.pdb
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.y9td7jribz.wasm
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.90s571e201.pdb.gz
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.y9td7jribz.wasm.gz
+C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\skwk8s9ui1-y9td7jribz.gz
+C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\c1jhhq4o6d-90s571e201.gz
+C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\a1w0b3e4ey-isp2lzoiv8.gz
