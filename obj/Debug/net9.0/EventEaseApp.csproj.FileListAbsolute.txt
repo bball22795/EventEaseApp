@@ -6,8 +6,6 @@ C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.8o
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.aep4lch3d1.wasm
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.rubq0v1yiy.js
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.4c6lx082o2.pdb
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.bmw79gvfer.wasm
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
@@ -265,7 +263,6 @@ C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Drawing.5
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Text.Encoding.Extensions.nlydxjh19m.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Configuration.FileExtensions.omar8pgxm8.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Security.Cryptography.Cng.tg2su1vayp.wasm.gz
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.4c6lx082o2.pdb.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\Microsoft.JSInterop.gkumi7kxvo.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Resources.Reader.09wnmnw7h6.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Xml.XmlSerializer.php9d66sr9.wasm.gz
@@ -363,7 +360,6 @@ C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.IO.FileSy
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Xml.XDocument.jcxbdnyj8b.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Diagnostics.TraceSource.777sathwzn.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Primitives.3pkwbmnqmy.wasm.gz
-C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.bmw79gvfer.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Configuration.bcycfuj8pt.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\System.Reflection.TypeExtensions.elsa09wwcc.wasm.gz
 C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\WindowsBase.ovqw333kan.wasm.gz
@@ -1065,9 +1061,6 @@ C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\9vf3knw6hc-tyz1a4w3vb.gz
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\r489smiiq7-tjcz0u77k5.gz
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\qvouh2q4mf-tptq2av103.gz
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\hcxylcfklo-lfu7j35m59.gz
-C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\skwk8s9ui1-bmw79gvfer.gz
-C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\c1jhhq4o6d-4c6lx082o2.gz
-C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\a1w0b3e4ey-jfoophtqrw.gz
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1082,3 +1075,10 @@ C:\Users\waing\EventEaseApp\obj\Debug\net9.0\EventEaseApp.dll
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\refint\EventEaseApp.dll
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\EventEaseApp.pdb
 C:\Users\waing\EventEaseApp\obj\Debug\net9.0\ref\EventEaseApp.dll
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.f0efmeztwq.pdb
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.3zryo7iwn7.wasm
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.f0efmeztwq.pdb.gz
+C:\Users\waing\EventEaseApp\bin\Debug\net9.0\wwwroot\_framework\EventEaseApp.3zryo7iwn7.wasm.gz
+C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\skwk8s9ui1-3zryo7iwn7.gz
+C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\c1jhhq4o6d-f0efmeztwq.gz
+C:\Users\waing\EventEaseApp\obj\Debug\net9.0\compressed\a1w0b3e4ey-pkj3xttuek.gz
