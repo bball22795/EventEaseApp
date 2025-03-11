@@ -1,21 +1,32 @@
-# Welcome to EventEaseApp
+<!DOCTYPE html>
+<html lang="en">
 
-EventEaseApp is a powerful tool to manage and organize your events effortlessly.
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventEaseApp</title>
+    <base href="/" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="EventEaseApp.styles.css" rel="stylesheet" />
+</head>
 
-## Features
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
 
-- Easy event creation and management
-- Real-time notifications
-- User-friendly interface
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
 
-## Getting Started
-
-To get started with EventEaseApp, follow the instructions in the [README](../README.md) file.
-
-## Documentation
-
-For detailed documentation, visit the [docs](./docs) section.
-
-## Contact
-
-For any inquiries, please contact us at [support@eventeaseapp.com](mailto:support@eventeaseapp.com).
+</html>
