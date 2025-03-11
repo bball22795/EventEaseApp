@@ -4,7 +4,7 @@ namespace EventEaseApp.Services
 {
     public class UserSessionService
     {
-        public string UserId { get; private set; }
+        public string? UserId { get; private set; }
         public DateTime SessionStartTime { get; private set; }
 
         public UserSessionService()

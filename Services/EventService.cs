@@ -26,7 +26,7 @@ namespace EventEaseApp.Services
             new Event { Id = 14, Name = "Event 14", Date = new DateTime(2025, 3, 15), Location = "New York" }
         };
 
-        public event Action OnChange;
+        public event Action? OnChange;
 
         public Task<Event> GetEventByIdAsync(int eventId)
         {
